@@ -21,13 +21,13 @@ typedef int (*send_hook)(struct task_struct *tsk,
 typedef void (*init_hook)(struct millet_sock *sk);
 
 struct millet_sock {
-	atomic_t has_init;
 	struct sock *sock;
 
 	struct mod_info {
 		int id;
 		enum MILLET_TYPE monitor;
 		atomic_t port;
+		atomic_t loop_init;
 		recv_hook recv_from;
 		send_hook send_to;
 		init_hook init;
@@ -39,6 +39,7 @@ struct millet_sock {
 		} stat;
 		char name[NAME_MAXLEN];
 		void *priv;
+		atomic_t has_init;
 	} mod[MILLET_TYPES_NUM];
 };
 
