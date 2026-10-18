@@ -3,3 +3,4 @@ obj-m += millet_core.o
 obj-m += millet_hs.o
 obj-m += millet_oem_cgroup.o
 millet_oem_cgroup-y += oem_cgroup.o
+obj-m += millet_sig.o
