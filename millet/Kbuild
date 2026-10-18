@@ -1,8 +1,10 @@
 # SPDX-License-Identifier: GPL-2.0
+ccflags-y += -I$(srctree)
 obj-m += millet_core.o
 obj-m += millet_hs.o
 obj-m += millet_oem_cgroup.o
 millet_oem_cgroup-y += oem_cgroup.o
 obj-m += millet_sig.o
 obj-m += millet_pkg.o
+obj-m += binder_gki.o
 obj-m += millet_binder.o
