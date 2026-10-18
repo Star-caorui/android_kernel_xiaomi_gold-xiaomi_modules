@@ -1,0 +1,3 @@
+# SPDX-License-Identifier: GPL-2.0
+obj-m += millet_oem_cgroup.o
+millet_oem_cgroup-y += oem_cgroup.o
